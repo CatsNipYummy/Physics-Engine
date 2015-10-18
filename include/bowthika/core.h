@@ -41,7 +41,7 @@ namespace bowthika {
 		}
 
 		// Turns this vector into a vector of unit length
-		void norimalize() {
+		void normalize() {
 
 		}
 	};
