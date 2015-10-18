@@ -1,4 +1,5 @@
 #include "precision.h"
+#include <math.h>
 
 namespace bowthika {
 	/*
@@ -7,15 +8,14 @@ namespace bowthika {
 
 	class Vector3
 	{
+    private:
+        real _pad;
+        
 	public:
 		real x;
 		real y;
 		real z;
 
-	private:
-		real _pad;
-
-	public:
 		// Default constructor creates a zero vector (Vector3 without arguments)
 		Vector3() : x(0), y(0), z(0) {}
 
@@ -92,6 +92,45 @@ namespace bowthika {
             x += scale * vector.x;
             y += scale * vector.y;
             z += scale * vector.z;
+        }
+        
+        /* Multiplication */
+        
+        // Component Product Multiplication Update
+        void componentProductUpdate(const Vector3 &vector) const {
+            x *= vector.x;
+            y *= vector.y;
+            z *= vector.z;
+        }
+        
+        // Component Product Multiplication
+        Vector3 componentProduct (const Vector3 &vector) const {
+            return Vector3(x * vector.x, y * vector.y, z * vector.z);
+        }
+        
+        // Scalar Product
+        real scalarProduct (const Vector3 &vector) const {
+            return x*vector.x + y*vector.y + z*vector.z;
+        }
+        
+        // Angle between A and B
+        real angleBetween(const Vector3 &vector) {
+            real cosineAngle = (this->scalarProduct(vector))/(this->magnitude() * vector.magnitude());
+            return acos(cosineAngle);
+        }
+        
+        // Vector Product
+        
+        // Calculates and returns the vector product of this vector with the provided vector
+        Vector3 vectorProduct (const Vector3 &vector) const {
+            return Vector3(y * vector.z - z * vector.y,
+                           z * vector.x - x * vector.z,
+                           x * vector.z - y * vector.x);
+        }
+        
+        // Updates this vector to be the vector product of its current value and the given vector
+        void operator %= (const Vector3 &vector) {
+            *this = vectorProduct(vector);
         }
 	};
 }
