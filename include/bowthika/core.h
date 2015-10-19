@@ -128,9 +128,19 @@ namespace bowthika {
                            x * vector.z - y * vector.x);
         }
         
-        // Updates this vector to be the vector product of its current value and the given vector
+        // Updates this vector to be the vector product of its current value and the given vector nm 
         void operator %= (const Vector3 &vector) {
             *this = vectorProduct(vector);
         }
+
+		//Orthonormal Basis (Find the vector perpendicular to two vectors)
+		void makeOrthonormalBasis(Vector3 *a, Vector3 *b, Vector3 *c) {
+			a->normalize();
+			(*c) = *a->vectorProduct(*b);
+			if (c.squareMagnitude() == 0.0)
+				return;
+			c->normalize();
+			(*b) = *c->vectorProduct(*a);
+		}
 	};
 }
