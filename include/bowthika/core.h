@@ -52,14 +52,14 @@ namespace bowthika {
            aV = a*V (a being the scalar)
          */
         
-        void operator*=(const real value) {
+        void operator *= (const real value) {
             x *= value;
             y *= value;
             z *= value;
         }
         
         // Returns the copy of the scaled vector value
-        Vector3 operator*(const real value) const {
+        Vector3 operator * (const real value) const {
             return Vector3(x*value, y*value, z*value);
         }
         
@@ -97,10 +97,11 @@ namespace bowthika {
         /* Multiplication */
         
         // Component Product Multiplication Update
-        void componentProductUpdate(const Vector3 &vector) const {
+        void componentProductUpdate(const Vector3 &vector) {
             x *= vector.x;
             y *= vector.y;
             z *= vector.z;
+            
         }
         
         // Component Product Multiplication
