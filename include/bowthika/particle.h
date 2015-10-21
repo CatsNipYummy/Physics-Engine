@@ -1,4 +1,5 @@
 #include "precision.h"
+#include "core.h"
 
 namespace bowthika {
     class Particle {
@@ -18,5 +19,38 @@ namespace bowthika {
         
         // Holds the inverse of the mass (1/mass). Easier during integration
         real inverseMass;
+        
+        // Kinectic Energy;
+        real kinecticEnergy;
+        
+    public:
+        
+        // Setters & Getters
+        
+        // Mass
+        void setMass (const real mass);
+        real getMass () const;
+        
+        // Position
+        void setPosition (const Vector3 &position);
+        Vector3 getPosition () const;
+        
+        //Velocity
+        void setVelocity (const Vector3 &velocity);
+        Vector3 getVelocity () const;
+        
+        // Acceleration
+        void setAcceleration (const Vector3 &position);
+        Vector3 getAcceleration () const;
+        
+        // Damping
+        void setDamping (const real damping);
+        real getDamping () const;
+        
+        // Integrates the particle forward in time by the given amount (Using Newton-Euler integration method)
+        void integrate(real duration);
+        
+        // Find the kinetic energy of the particle
+        void findKineticEnergy ();
     };
 }

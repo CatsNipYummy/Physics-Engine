@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		046A16121BD3399800DB379B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 046A16111BD3399800DB379B /* main.cpp */; };
+		04C1AC581BD747B100F80EC1 /* core.h in Sources */ = {isa = PBXBuildFile; fileRef = 04C1AC541BD747B100F80EC1 /* core.h */; };
+		04C1AC591BD747B100F80EC1 /* particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 04C1AC551BD747B100F80EC1 /* particle.cpp */; };
+		04C1AC5A1BD747B100F80EC1 /* particle.h in Sources */ = {isa = PBXBuildFile; fileRef = 04C1AC561BD747B100F80EC1 /* particle.h */; };
+		04C1AC5B1BD747B100F80EC1 /* precision.h in Sources */ = {isa = PBXBuildFile; fileRef = 04C1AC571BD747B100F80EC1 /* precision.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +29,11 @@
 /* Begin PBXFileReference section */
 		046A160E1BD3399800DB379B /* Bowthika */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Bowthika; sourceTree = BUILT_PRODUCTS_DIR; };
 		046A16111BD3399800DB379B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		046A16181BD339BE00DB379B /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; name = include; path = ../../../include; sourceTree = "<group>"; };
+		04C1AC4A1BD7475B00F80EC1 /* bowthika */ = {isa = PBXFileReference; lastKnownFileType = folder; name = bowthika; path = ../../../include/bowthika; sourceTree = "<group>"; };
+		04C1AC541BD747B100F80EC1 /* core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = core.h; path = ../../include/bowthika/core.h; sourceTree = "<group>"; };
+		04C1AC551BD747B100F80EC1 /* particle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = particle.cpp; path = ../../include/bowthika/particle.cpp; sourceTree = "<group>"; };
+		04C1AC561BD747B100F80EC1 /* particle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = particle.h; path = ../../include/bowthika/particle.h; sourceTree = "<group>"; };
+		04C1AC571BD747B100F80EC1 /* precision.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = precision.h; path = ../../include/bowthika/precision.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +50,10 @@
 		046A16051BD3399800DB379B = {
 			isa = PBXGroup;
 			children = (
+				04C1AC541BD747B100F80EC1 /* core.h */,
+				04C1AC551BD747B100F80EC1 /* particle.cpp */,
+				04C1AC561BD747B100F80EC1 /* particle.h */,
+				04C1AC571BD747B100F80EC1 /* precision.h */,
 				046A16101BD3399800DB379B /* Bowthika */,
 				046A160F1BD3399800DB379B /* Products */,
 			);
@@ -58,7 +70,7 @@
 		046A16101BD3399800DB379B /* Bowthika */ = {
 			isa = PBXGroup;
 			children = (
-				046A16181BD339BE00DB379B /* include */,
+				04C1AC4A1BD7475B00F80EC1 /* bowthika */,
 				046A16111BD3399800DB379B /* main.cpp */,
 			);
 			path = Bowthika;
@@ -120,6 +132,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C1AC581BD747B100F80EC1 /* core.h in Sources */,
+				04C1AC591BD747B100F80EC1 /* particle.cpp in Sources */,
+				04C1AC5A1BD747B100F80EC1 /* particle.h in Sources */,
+				04C1AC5B1BD747B100F80EC1 /* precision.h in Sources */,
 				046A16121BD3399800DB379B /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,6 +255,7 @@
 				046A16171BD3399800DB379B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

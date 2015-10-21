@@ -135,13 +135,13 @@ namespace bowthika {
         }
 
 		//Orthonormal Basis (Find the vector perpendicular to two vectors)
-		void makeOrthonormalBasis(Vector3 *a, Vector3 *b, Vector3 *c) {
-			a->normalize();
-			(*c) = *a->vectorProduct(*b);
-			if (c.squareMagnitude() == 0.0)
-				return;
-			c->normalize();
-			(*b) = *c->vectorProduct(*a);
-		}
+//		void makeOrthonormalBasis(Vector3 *a, Vector3 *b, Vector3 *c) {
+//			a->normalize();
+//			(*c) = *a->vectorProduct(*b);
+//			if (c->squareMagnitude() == 0.0)
+//				return;
+//			c->normalize();
+//			(*b) = *c->vectorProduct(*a);
+//		}
 	};
 }

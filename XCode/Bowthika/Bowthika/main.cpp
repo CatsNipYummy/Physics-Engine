@@ -7,10 +7,19 @@
 //
 
 #include <iostream>
-#include <bowthika/core.h>
+#include "particle.h"
+
+using namespace bowthika;
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+   
+    Particle particleOne, particleTwo;
+    particleOne.setPosition(Vector3(1, 2, 3));
+    particleOne.setVelocity(Vector3(1, 2, 3));
+    particleOne.setAcceleration(Vector3(1, 2, 3));
+    particleOne.setDamping(0.8f);
+    particleOne.setMass(8.0f);
+    particleOne.integrate(10);
+    
     return 0;
 }
